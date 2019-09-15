@@ -119,10 +119,28 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\1-FullBar.xaml.cs">
+      <DependentUpon>1-FullBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\2-FullBarAccent.xaml.cs">
+      <DependentUpon>2-FullBarAccent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\3-PrimaryOnly.xaml.cs">
+      <DependentUpon>3-PrimaryOnly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\4-PrimaryOverflow.xaml.cs">
+      <DependentUpon>4-PrimaryOverflow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\5-PrimarySecondary.xaml.cs">
+      <DependentUpon>5-PrimarySecondary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\6-MailSample.xaml.cs">
+      <DependentUpon>6-MailSample.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,9 +162,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\1-FullBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\2-FullBarAccent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\3-PrimaryOnly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\4-PrimaryOverflow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\5-PrimarySecondary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\6-MailSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

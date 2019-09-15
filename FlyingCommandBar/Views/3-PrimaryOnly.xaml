@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="FlyingCommandBar.Views._3_PrimaryOnly"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlyingCommandBar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctk="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid>
+        <!-- SAMPLE 3 - Primary Button only. This sample shows the FlyingCommandBar with only a PrimaryButton. Handy to show things like a Save-button in a neat looking fashion! :) -->
+        <TextBlock Text="Sample 3 - Primary Button only"
+                   TextWrapping="Wrap"
+                   Margin="12"
+                   Style="{ThemeResource FluentTitleTextStyle}" />
+
+        
+        <!-- FlyingCommandBar -->
+        <ctk:DropShadowPanel Canvas.ZIndex="10"
+                             Grid.Row="1"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom"
+                             Margin="24">
+            <StackPanel Orientation="Horizontal"
+                        Visibility="Visible"
+                        CornerRadius="2"
+                        Background="{ThemeResource AppBarBackgroundThemeBrush}">
+
+                <!-- Primary button - Put your most important function for the page here! -->
+                <Button Canvas.ZIndex="20"
+                        CornerRadius="2"
+                        Height="48"
+                        Padding="12,8"
+                        Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+                        Style="{ThemeResource ButtonRevealStyle}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal"
+                                    RequestedTheme="Dark">
+                            <TextBlock Style="{ThemeResource FluentFormIconStyle}"
+                                       Text="&#xE105;"/>
+                            <TextBlock Text="Save" />
+                        </StackPanel>
+                    </Button.Content>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Save" />
+                    </ToolTipService.ToolTip>
+                </Button>
+                <!-- End of Primary Button -->
+            </StackPanel>
+        </ctk:DropShadowPanel>
+        <!-- End of FlyingCommandBar -->
+    </Grid>
+
+</Page>

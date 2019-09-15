@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="FlyingCommandBar.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlyingCommandBar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctk="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Buttons -->
+        <ctk:DropShadowPanel Grid.Row="0"
+                             Canvas.ZIndex="100"
+                             HorizontalAlignment="Stretch"
+                             HorizontalContentAlignment="Stretch">
+            <StackPanel Grid.Row="0"
+                        Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}"
+                        HorizontalAlignment="Stretch"
+                        Padding="12">
+                <TextBlock Text="FlyingCommandBar samples"
+                       Style="{ThemeResource FluentSubheaderTextStyle}" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="For implemtation info, check "
+                           VerticalAlignment="Center"/>
+                    <HyperlinkButton Content="here" 
+                                 NavigateUri="https://github.com/ikarago/DEMO-FlyingCommandBar"
+                                 Margin="4,0,0,0"
+                                 VerticalAlignment="Center"/>
+                </StackPanel>
+                <Button x:Name="btnSample1"
+                    Content="Sample 1 - Full FlyingCommandBar"
+                    Margin="0,12,0,0"
+                    Click="BtnSample1_Click"/>
+                <Button x:Name="btnSample2"
+                    Content="Sample 2 - Full FlyingCommandBar with Accent"
+                    Margin="0,12,0,0"
+                    Click="BtnSample2_Click"/>
+                <Button x:Name="btnSample3"
+                    Content="Sample 3 - Primary Button only"
+                    Margin="0,12,0,0"
+                    Click="BtnSample3_Click"/>
+                <Button x:Name="btnSample4"
+                    Content="Sample 4 - Primary and Overflow only"
+                    Margin="0,12,0,0" 
+                    Click="BtnSample4_Click"/>
+                <Button x:Name="btnSample5"
+                    Content="Sample 5 - Primary and Secondary only"
+                    Margin="0,12,0,0"
+                    Click="BtnSample5_Click"/>
+                <Button x:Name="btnSample6"
+                    Content="Sample 6 - Mail App sample"
+                    Margin="0,12,0,0"
+                    Click="BtnSample6_Click"/>
+            </StackPanel>
+        </ctk:DropShadowPanel>
+
+        
+        <!-- Sample Frame -->
+        <Frame x:Name="frSamples"
+               Grid.Row="1" />
+
+    </Grid>
+</Page>

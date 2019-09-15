@@ -1,0 +1,190 @@
+﻿<Page
+    x:Class="FlyingCommandBar.Views._6_MailSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlyingCommandBar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctk="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid>
+        <!-- SAMPLE 6 - A sample to showcase the bar in a 'real world' app situation. In this case, an email application -->
+        <TextBlock Text="Sample 6 - Mail sample"
+                   TextWrapping="Wrap"
+                   Margin="12"
+                   Style="{ThemeResource FluentTitleTextStyle}" />
+        
+
+        <!-- FlyingCommandBar -->
+        <ctk:DropShadowPanel Canvas.ZIndex="10"
+                             Grid.Row="1"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom"
+                             Margin="24">
+            <StackPanel Orientation="Horizontal"
+                        Visibility="Visible"
+                        CornerRadius="2"
+                        Background="{ThemeResource AppBarBackgroundThemeBrush}">
+
+                <!-- Primary button - Put your most important function for the page here! -->
+                <Button Canvas.ZIndex="20"
+                        CornerRadius="2,0,0,2"
+                        Height="48"
+                        Padding="12,8"
+                        Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+                        Style="{ThemeResource ButtonRevealStyle}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal"
+                                    RequestedTheme="Dark">
+                            <TextBlock Style="{ThemeResource FluentFormIconStyle}"
+                                       Text="&#xE97A;"/>
+                            <TextBlock Text="Respond" />
+                        </StackPanel>
+                    </Button.Content>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Reply" />
+                    </ToolTipService.ToolTip>
+                    <!-- Replay Flyout -->
+                    <Button.Flyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem Text="Reply"
+                                            MinWidth="120">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE8CA;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Reply All">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE8C2;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutSeparator />
+                            <MenuFlyoutItem Text="Forward">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE72A;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                        </MenuFlyout>
+                    </Button.Flyout>
+                    <!-- End of Reply flyout-->
+                </Button>
+                <!-- End of Primary Button -->
+
+
+                <!-- Secondary Button - 1 -->
+                <Button Canvas.ZIndex="21"
+                        Height="48"
+                        Padding="12,8"
+                        Visibility="Visible"
+                        CornerRadius="0"
+                        Style="{ThemeResource ButtonRevealStyle}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{ThemeResource FluentFormIconStyle}"
+                                       Margin="0"
+                                       Text="&#xE107;"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Delete" />
+                    </ToolTipService.ToolTip>
+                </Button>
+                <!-- End of Secondary Button - 1 -->
+                
+                <!-- Secondary Button - 2 -->
+                <Button Canvas.ZIndex="22"
+                        Height="48"
+                        Padding="12,8"
+                        Visibility="Visible"
+                        CornerRadius="0"
+                        Style="{ThemeResource ButtonRevealStyle}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{ThemeResource FluentFormIconStyle}"
+                                       Margin="0"
+                                       Text="&#xE7C1;"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Set Flag" />
+                    </ToolTipService.ToolTip>
+                </Button>
+                <!-- End of Secondary Button - 2 -->
+
+
+                <!-- Overflow Button -->
+                <Button Canvas.ZIndex="23"
+                        Height="48"
+                        CornerRadius="0,2,2,0"
+                        Padding="12,8"
+                        Style="{ThemeResource ButtonRevealStyle}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{ThemeResource FluentFormIconStyle}"
+                                       Margin="0"
+                                       Text="&#xE10C;"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="More..." />
+                    </ToolTipService.ToolTip>
+                    <!-- Overflow Flyout-->
+                    <Button.Flyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem Text="Mark as unread">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE715;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Mark as junk">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xECE4;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Move">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE8DE;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <!-- Seperator -->
+                            <MenuFlyoutSeparator />
+                            <MenuFlyoutItem Text="Find">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE11A;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Zoom">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE8A3;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <!-- Seperator -->
+                            <MenuFlyoutSeparator />
+                            <MenuFlyoutItem Text="Share">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE72D;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Print">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE749;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Save As...">
+                                <MenuFlyoutItem.Icon>
+                                    <FontIcon Glyph="&#xE792;"/>
+                                </MenuFlyoutItem.Icon>
+                            </MenuFlyoutItem>
+                        </MenuFlyout>
+                    </Button.Flyout>
+                    <!-- End of Overflow Flyout -->
+                </Button>
+                <!-- End of Overflow -->
+
+            </StackPanel>
+        </ctk:DropShadowPanel>
+        <!-- End of FlyingCommandBar -->
+    </Grid>
+</Page>

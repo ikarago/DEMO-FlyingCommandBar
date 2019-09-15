@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="FlyingCommandBar.Views._5_PrimarySecondary"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlyingCommandBar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ctk="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid>
+        <!-- SAMPLE 5 - Primary and Secondary Buttons only. This sample shows the FlyingCommandBar with no Overflow Button. 
+        You can use the lack of the Overflow button to implement up to 3 secondary commands, but please don't go over that, as that would cause bad UX for you user (too much choice distracting them from the main content) -->
+        <TextBlock Text="Sample 5 - Primary Button and Secondary Buttons only"
+                   TextWrapping="Wrap"
+                   Margin="12"
+                   Style="{ThemeResource FluentTitleTextStyle}" />
+
+
+        <!-- FlyingCommandBar -->
+        <ctk:DropShadowPanel Canvas.ZIndex="10"
+                             Grid.Row="1"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom"
+                             Margin="24">
+            <StackPanel Orientation="Horizontal"
+                        Visibility="Visible"
+                        CornerRadius="2"
+                        Background="{ThemeResource AppBarBackgroundThemeBrush}">
+
+                <!-- Primary button - Put your most important function for the page here! -->
+                <Button Canvas.ZIndex="20"
+                        CornerRadius="2,0,0,2"
+                        Height="48"
+                        Padding="12,8"
+                        Style="{ThemeResource ButtonRevealStyle}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{ThemeResource FluentFormIconStyle}"
+                                       Text="&#xE10B;"/>
+                            <TextBlock Text="Accept" />
+                        </StackPanel>
+                    </Button.Content>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Accept" />
+                    </ToolTipService.ToolTip>
+                </Button>
+                <!-- End of Primary Button -->
+
+
+                <!-- Secondary Button - 1 -->
+                <Button Canvas.ZIndex="21"
+                        Height="48"
+                        Padding="12,8"
+                        Visibility="Visible"
+                        CornerRadius="0,2,2,0"
+                        Style="{ThemeResource ButtonRevealStyle}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{ThemeResource FluentFormIconStyle}"
+                                       Margin="0"
+                                       Text="&#xE106;"/>
+                        </StackPanel>
+                    </Button.Content>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Decline" />
+                    </ToolTipService.ToolTip>
+                </Button>
+                <!-- End of Secondary Button - 1 -->
+
+
+            </StackPanel>
+        </ctk:DropShadowPanel>
+        <!-- End of FlyingCommandBar -->
+    </Grid>
+
+</Page>
