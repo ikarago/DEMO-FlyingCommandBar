@@ -1,5 +1,6 @@
 # DEMO-FlyingCommandBar
 A XAML sample to showcase a set set of buttons that looks like a flying CommandBar
+![Featured Image](.github/Assets/Blog-FeaturedImage.png)
 
 
 ## Instructions
@@ -7,4 +8,9 @@ The detailed instructions about this sample can be found on [my blog](https://ww
 
 
 ## Support me
-**Like this project?** Buy me a coffee: https://paypal.me/ikarago
+**Like this project?** [Buy me a coffee](https://paypal.me/ikarago) or support me on [Patreon](https://www.patreon.com/ikarago)!
+
+
+## Screenshots
+![Sample App Dark](.github/Assets/Dark-SampleApp.png)
+![Sample App Light](.github/Assets/Light-SampleApp.png)
