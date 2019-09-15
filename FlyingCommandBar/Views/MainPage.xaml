@@ -27,10 +27,10 @@
                 <TextBlock Text="FlyingCommandBar samples"
                        Style="{ThemeResource FluentSubheaderTextStyle}" />
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="For implemtation info, check "
+                    <TextBlock Text="For documentation, check "
                            VerticalAlignment="Center"/>
                     <HyperlinkButton Content="here" 
-                                 NavigateUri="https://github.com/ikarago/DEMO-FlyingCommandBar"
+                                 NavigateUri="https://www.ikarago.com/?p=273"
                                  Margin="4,0,0,0"
                                  VerticalAlignment="Center"/>
                 </StackPanel>
