@@ -4,7 +4,9 @@ A XAML sample to showcase a set set of buttons that looks like a flying CommandB
 
 
 ## Instructions
-The detailed instructions about this sample can be found on [my blog](https://www.ikarago.com/development/uwp-flyingcommandbar/).
+The detailed instructions about this sample can be found on my blog. 
+* [About the design](https://www.ikarago.com/development/uwp-flyingcommandbar/)
+* [About the implementation](https://www.ikarago.com/development/uwp-flyingcommandbar-revisited/)
 
 
 ## Support me
