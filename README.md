@@ -12,5 +12,5 @@ The detailed instructions about this sample can be found on [my blog](https://ww
 
 
 ## Screenshots
-![Sample App Dark](.github/Assets/Dark-SampleApp.png)
-![Sample App Light](.github/Assets/Light-SampleApp.png)
+![Sample App Dark](.github/Assets/Dark-NewCommandBar.png)
+![Sample App Light](.github/Assets/Light-NewCommandBar.png)
