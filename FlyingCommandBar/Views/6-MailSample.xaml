@@ -15,11 +15,135 @@
                    TextWrapping="Wrap"
                    Margin="12"
                    Style="{ThemeResource FluentTitleTextStyle}" />
+
+
+        <!-- New FlyingCommandBar-->
+        <ctk:DropShadowPanel Canvas.ZIndex="20"
+                             Grid.Row="1"
+                             BlurRadius="10.0"
+                             ShadowOpacity="0.30"
+                             Color="Black"
+                             OffsetX="5"
+                             OffsetY="5"
+                             Margin="24"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom">
+            <CommandBar DefaultLabelPosition="Right"
+                        CornerRadius="2"
+                        Style="{ThemeResource CommandBarRevealStyle}">
+                <CommandBar.PrimaryCommands>
+                    <!-- Primary Button -->
+                    <AppBarButton Label="Respond"
+                                  Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+                                  Foreground="{ThemeResource SystemControlForegroundChromeWhiteBrush}"
+                                  CornerRadius="2,0,0,2">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE97A;"/>
+                        </AppBarButton.Icon>
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="Respond" />
+                        </ToolTipService.ToolTip>
+                        <!-- Primary Button Flyout -->
+                        <AppBarButton.Flyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Reply"
+                                                MinWidth="120">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xE8CA;"/>
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Reply All">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xE8C2;"/>
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutSeparator />
+                                <MenuFlyoutItem Text="Forward">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xE72A;"/>
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                            </MenuFlyout>
+                        </AppBarButton.Flyout>
+                        <!-- End of Primary Button Flyout -->
+
+                    </AppBarButton>
+                    <!-- End of Primary Button -->
+
+                    <!-- Secondary Buttons -->
+                    <AppBarButton Icon="Delete"
+                                  Label="Delete"
+                                  LabelPosition="Collapsed">
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="Delete" />
+                        </ToolTipService.ToolTip>
+                    </AppBarButton>
+                    <AppBarButton Icon="Flag"
+                                  Label="Set Flag"
+                                  LabelPosition="Collapsed">
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="Set Flag" />
+                        </ToolTipService.ToolTip>
+                    </AppBarButton>
+                    <!-- End of Secondary Buttons -->
+                </CommandBar.PrimaryCommands>
+                <!-- Overflow Button -->
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Label="Mark as unread">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE715;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Mark as junk">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xECE4;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Move">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE8DE;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <!-- Seperator -->
+                    <AppBarSeparator />
+                    <AppBarButton Label="Find">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE11A;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Zoom">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE8A3;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <!-- Seperator -->
+                    <AppBarSeparator />
+                    <AppBarButton Label="Share">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE72D;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Print">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE749;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Label="Save As...">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE792;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                </CommandBar.SecondaryCommands>
+                <!-- End of Overflow Button -->
+            </CommandBar>
+        </ctk:DropShadowPanel>
+        <!-- End of New FlyingCommandBar -->
         
 
-        <!-- FlyingCommandBar -->
+        <!-- Old FlyingCommandBar -->
         <ctk:DropShadowPanel Canvas.ZIndex="10"
                              Grid.Row="1"
+                             Visibility="Collapsed"
                              HorizontalAlignment="Right"
                              VerticalAlignment="Bottom"
                              Margin="24">
@@ -185,6 +309,6 @@
 
             </StackPanel>
         </ctk:DropShadowPanel>
-        <!-- End of FlyingCommandBar -->
+        <!-- End of Old FlyingCommandBar -->
     </Grid>
 </Page>

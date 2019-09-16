@@ -16,10 +16,87 @@
                    Margin="12"
                    Style="{ThemeResource FluentTitleTextStyle}" />
 
+        
+        <!-- New FlyingCommandBar-->
+        <ctk:DropShadowPanel Canvas.ZIndex="20"
+                             Grid.Row="1"
+                             BlurRadius="10.0"
+                             ShadowOpacity="0.30"
+                             Color="Black"
+                             OffsetX="5"
+                             OffsetY="5"
+                             Margin="24"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom">
+            <CommandBar DefaultLabelPosition="Right"
+                        CornerRadius="2"
+                        Style="{ThemeResource CommandBarRevealStyle}">
+                <CommandBar.PrimaryCommands>
+                    <!-- Primary Button -->
+                    <AppBarButton Icon="Add"
+                                  Label="New item"
+                                  CornerRadius="2,0,0,2">
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="New item" />
+                        </ToolTipService.ToolTip>
+                    </AppBarButton>
+                    <!-- End of Primary Button -->
+                    
+                    <!-- Secondary Buttons -->
+                    <AppBarButton Label="Select"
+                                  LabelPosition="Collapsed">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE762;"/>
+                        </AppBarButton.Icon>
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="Select" />
+                        </ToolTipService.ToolTip>
+                    </AppBarButton>
+                    <AppBarButton Icon="Find"
+                                  Label="Search"
+                                  LabelPosition="Collapsed">
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="Search" />
+                        </ToolTipService.ToolTip>
+                        <!-- Sample flyout, just to showcase what you can do. :)-->
+                        <AppBarButton.Flyout>
+                            <Flyout>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBox x:Name="tbxSearch"
+                                             PlaceholderText="Search" 
+                                             CornerRadius="2,0,0,2"
+                                             MinWidth="240"/>
+                                    <Button Content="&#xE11A;"
+                                            FontFamily="Segoe MDL2 Assets"
+                                            VerticalAlignment="Stretch"
+                                            CornerRadius="0,2,2,0"/>
+                                </StackPanel>
+                            </Flyout>
+                        </AppBarButton.Flyout>
+                        <!-- End of sample flyout-->
+                    </AppBarButton>
+                    <!-- End of Secondary Buttons -->
+                </CommandBar.PrimaryCommands>
+                <!-- Overflow Button -->
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Icon="Setting"
+                                  Label="Settings" />
+                    <AppBarButton Label="About">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE946;"/>
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                </CommandBar.SecondaryCommands>
+                <!-- End of Overflow Button -->
+            </CommandBar>          
+        </ctk:DropShadowPanel>
+        <!-- End of New FlyingCommandBar -->
 
-        <!-- FlyingCommandBar -->
+        
+        <!-- Old FlyingCommandBar -->
         <ctk:DropShadowPanel Canvas.ZIndex="10"
                              Grid.Row="1"
+                             Visibility="Collapsed"
                              HorizontalAlignment="Right"
                              VerticalAlignment="Bottom"
                              Margin="24">
@@ -89,8 +166,7 @@
                     <Button.Flyout>
                         <Flyout>
                             <StackPanel Orientation="Horizontal">
-                                <TextBox x:Name="tbxSearch"
-                                         PlaceholderText="Search" 
+                                <TextBox PlaceholderText="Search" 
                                          CornerRadius="2,0,0,2"
                                          MinWidth="240"/>
                                 <Button Content="&#xE11A;"
@@ -139,6 +215,6 @@
 
             </StackPanel>
         </ctk:DropShadowPanel>
-        <!-- End of FlyingCommandBar -->
+        <!-- End of Old FlyingCommandBar -->
     </Grid>
 </Page>

@@ -18,9 +18,55 @@
                    Style="{ThemeResource FluentTitleTextStyle}" />
 
 
-        <!-- FlyingCommandBar -->
+        <!-- New FlyingCommandBar-->
+        <ctk:DropShadowPanel Canvas.ZIndex="20"
+                             Grid.Row="1"
+                             BlurRadius="10.0"
+                             ShadowOpacity="0.30"
+                             Color="Black"
+                             OffsetX="5"
+                             OffsetY="5"
+                             Margin="24"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom">
+            <CommandBar DefaultLabelPosition="Right"
+                        CornerRadius="2"
+                        Style="{ThemeResource CommandBarRevealStyle}">
+                <CommandBar.PrimaryCommands>
+                    <!-- Primary Button -->
+                    <AppBarButton Icon="Accept"
+                                  Label="Accept"
+                                  Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+                                  Foreground="{ThemeResource SystemControlForegroundChromeWhiteBrush}"
+                                  CornerRadius="2,0,0,2">
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="Accept" />
+                        </ToolTipService.ToolTip>
+                    </AppBarButton>
+                    <!-- End of Primary Button -->
+
+                    <!-- Secondary Buttons -->
+                    <AppBarButton Label="Decline"
+                                  LabelPosition="Collapsed"
+                                  CornerRadius="0,2,2,0">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE10A;"/>
+                        </AppBarButton.Icon>
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="Decline" />
+                        </ToolTipService.ToolTip>
+                    </AppBarButton>
+                    <!-- End of Secondary Buttons -->
+                </CommandBar.PrimaryCommands>
+            </CommandBar>
+        </ctk:DropShadowPanel>
+        <!-- End of New FlyingCommandBar -->
+
+
+        <!-- Old FlyingCommandBar -->
         <ctk:DropShadowPanel Canvas.ZIndex="10"
                              Grid.Row="1"
+                             Visibility="Collapsed"
                              HorizontalAlignment="Right"
                              VerticalAlignment="Bottom"
                              Margin="24">
@@ -72,7 +118,7 @@
 
             </StackPanel>
         </ctk:DropShadowPanel>
-        <!-- End of FlyingCommandBar -->
+        <!-- End of Old FlyingCommandBar -->
     </Grid>
 
 </Page>
